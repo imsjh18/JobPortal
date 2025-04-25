@@ -1,0 +1,136 @@
+/* Privacy.css - iOS-inspired styling for the Privacy page */
+
+.privacy-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.privacy-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.privacy-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.privacy-overview-section,
+.privacy-data-section,
+.privacy-terms-section,
+.privacy-rights-section {
+  background-color: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.privacy-overview-section:hover,
+.privacy-data-section:hover,
+.privacy-terms-section:hover,
+.privacy-rights-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+section h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 3px;
+}
+
+.privacy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.privacy-card {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.privacy-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.privacy-card-header svg {
+  color: #000;
+}
+
+.privacy-card h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: #333;
+}
+
+.privacy-card p {
+  margin-bottom: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.privacy-card ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.privacy-card li {
+  margin-bottom: 8px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.privacy-rights-section p {
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .privacy-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .privacy-section h1 {
+    font-size: 2rem;
+  }
+  
+  section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .privacy-card h3 {
+    font-size: 1.2rem;
+  }
+}

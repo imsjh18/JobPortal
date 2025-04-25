@@ -1,0 +1,107 @@
+.landing-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.9s ease;
+  opacity: 0;
+}
+
+.landing-container.loaded {
+  opacity: 1;
+}
+
+.landing-container.clicked {
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+.landing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+}
+
+.landing-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo-icon {
+  margin-right: 1rem;
+  color: #000000;
+}
+
+.landing-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000000;
+  position: relative;
+  margin: 0;
+}
+
+/* Shadow effect using data-text attribute */
+.landing-title::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  color: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+  filter: blur(1px);
+}
+
+.landing-subtitle {
+  font-size: 1.5rem;
+  color: #333333;
+  margin-bottom: 2rem;
+}
+
+.enter-button {
+  padding: 0.75rem 2.5rem;
+  font-size: 1.2rem;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.enter-button:hover {
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.landing-hint {
+  font-size: 0.9rem;
+  color: #666666;
+  margin: 0;
+}
+
+/* Animation for the hint text */
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+.landing-hint {
+  animation: pulse 2s infinite;
+}
